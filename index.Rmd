@@ -1,9 +1,34 @@
 --- 
+knit: bookdown::render_book
 title: "Heli-GPS Analysis in the Context of Mountain Pine Beetle"
 author: "Leonard Buechner"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
+# site: bookdown::bookdown_site
+
+bibliography: D:/Projects/MPB/MPB-report/docs/references.bib
+
+header-includes:
+    - \usepackage{subfig}
+    # - \usepackage[left]{lineno}
+    # - \linenumbers
 ---
 
-# Down the rabbit-hole
+```{r, setup, include=FALSE, echo=FALSE}
+if (getwd() == "D:/Projects/MPB"){
+    setwd("./MPB-report")
+}
 
+library(knitr)
+options(tinytex.verbose = TRUE)
+knitr::opts_chunk$set(echo = FALSE, out.width = "80%")
+
+if("bookdown::word_document2" %in% rmarkdown::all_output_formats('index.Rmd')) {
+    options(knitr.graphics.auto_pdf = FALSE)
+}else {
+    options(knitr.graphics.auto_pdf = TRUE)
+    # options(knitr.table.format = "html")
+    knitr::opts_chunk$set(fig.align = "center")
+}
+knitr::write_bib(c(.packages(), "bookdown"), "packages.bib")
+bookdown::render_book('index.Rmd')
+```
