@@ -1,0 +1,13 @@
+# Areas
+Here are the areas of Interest for us. The areas are based on detected Mountain Pine Beetle in the years 2011, 2019, 2020, and 2021, and in relatively close distance to at least gravel roads. Based on the total number of trees affected by MPB within each area, the selection have been further narrowed down to the top 50 % and top 25 % in orange and re respectively. 
+
+```{r GP, fig.cap = 'Area South of Grande Prairie', echo=F}
+knitr::include_graphics('../graphics/South-of-Grande-Prairie.pdf')
+```
+```{r WC, fig.cap = "Area North of Whitecourt", echo=F}
+knitr::include_graphics('../graphics/North-of-Whitecourt.pdf')
+```
+```{r RMC, fig.cap = "Area North-West of Rocky Mountain House", echo=F}
+knitr::include_graphics('../graphics/North-of-RMH.pdf')
+```
+
