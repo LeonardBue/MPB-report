@@ -1,3 +1,44 @@
+--- 
+knit: "bookdown::render_book"
+title: "Heli-GPS Analysis in the Context of Mountain Pine Beetle"
+author: "Leonard Buechner"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+bibliography: [references.bib, packages.bib]
+
+header-includes:
+    - \usepackage{subfig}
+    - \usepackage{biblatex}
+    - \addbibresource{references.bib}
+    # - \usepackage[left]{lineno}
+    # - \linenumbers
+---
+
+```{r, include=FALSE, echo=FALSE}
+# To compile the report, klick on knit. This wil invoke the bookdown::render_book("index.Rmd")
+
+setwd("d:/Projects/MPB/MPBreport")
+
+
+library(knitr)
+library(kableExtra)
+options(tinytex.verbose = TRUE)
+knitr::opts_chunk$set(echo = FALSE, out.width = "80%")
+
+
+if("bookdown::word_document2" %in% rmarkdown::all_output_formats("index.Rmd")) {
+    options(knitr.graphics.auto_pdf = FALSE)
+}else {
+    options(knitr.graphics.auto_pdf = TRUE)
+    knitr::opts_chunk$set(fig.align = "center")
+}
+knitr::write_bib(c(.packages(), "bookdown"), "packages.bib")
+options(kableExtra.kable_styling.latex_options = c("striped", "hover"))
+# bookdown::render_book("index.Rmd")
+```
+
+<!--chapter:end:index.Rmd-->
+
 # Stratification
 ```{r}
 library(kableExtra)
@@ -50,3 +91,12 @@ knitr::include_graphics('../graphics/North-of-RMH.png')
 ```
 
 This document was written with bookdown [@R-bookdown] and was initially generated from a bookdown template available here: https://github.com/jtr13/bookdown-template.
+
+<!--chapter:end:01-stratification.Rmd-->
+
+# References
+
+<div id="references"></div>
+
+<!--chapter:end:03-references.Rmd-->
+

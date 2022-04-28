@@ -115,7 +115,7 @@
 
 \title{Heli-GPS Analysis in the Context of Mountain Pine Beetle}
 \author{Leonard Buechner}
-\date{2022-04-27}
+\date{2022-04-28}
 
 \begin{document}
 \maketitle
@@ -127,21 +127,10 @@
 \hypertarget{stratification}{%
 \section{Stratification}\label{stratification}}
 
-After lodgepole pines (Pinus contorta) have been attacked by Mountain Pine Beetle (MPB), they show different stages. The needles of attacked trees wil turn from green over yellow to red within the first 12 months (red-attack). It then takes in between 1-3 years until all needles have fallen to the ground, when the trees remain standing but without needles (grey-attack) (Wulder, White, and Dymond 2005). Depending on the type of stand, according to Mitchell and Preisler (1998), dead trees begin to fall after 3 to 5 years and 80 - 90 \% of trees had fallen after 11 years.
-This leads to different stages of beetle attack that will be considered in this study. All green-attack trees detected in 2021 and 2020 are now with high probability in the red-attack stage. Some of the trees that have been detected as red-attack in 2021, will still classify as red-attack and others as grey-attack. A clear distinction based on time of detection is not possible without additional data, since it can take several years before all needles have fallen of the tree, the GPS locations of MPB-attacked trees provided by the government of Alberta (Wulder, White, and Dymond 2005). Collecting the LiDAR data at the end of May, all green-attack trees that have been attacked in 2019 and before, as well as all red-attack trees detected in 2020 and before, will now classify as grey attack. Additionally, it can be expected that most of the trees that have been detected as red-attack in 2011 and before, now have fallen to the ground (Schoennagel et al. 2012).
-
-Three broad areas of interest have been selected (refer to fig.~\ref{fig:AoIs}) based on availability of observed MPB attacks in the years 2011, 2019, 2020, and 2021, while also having a dense network of paved roads and gravel roads. These areas of interest will be referred to as th Grande Prairie (GP) area in the North-West, the Whitecourt (WC) area in the North-East, and the Rocky Mountain House (RMH) area to the South-East.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{../graphics/AreasOfInterest} 
-
-}
-
-\caption{50 km by 50 km areas of interest for further investigation.}\label{fig:AoIs}
-\end{figure}
-
-As already shown by various authors before, lodgepole pine (Pinus contorta) is the most commonly attacked by MPB, thus, areas where chosen, where lodgepole pine is one of the most dominant species. This information was based on a visual analysis of species classification, how it was in 2019, on a 30 m by 30 m grid. Each resulting pixel is classified as the most dominant tree species within that pixel. Where trees were not the dominant species, the pixel is classified as ``No Tree''. Table \ref{tab:species}shows all species that dominate the area classified within at least one pixel and their corresponding value and NFI codes.
+After lodgepole pines (Pinus contorta) have been attacked by Mountain Pine Beetle (MPB), the phenology of the symptoms shows three stages. The needles of attacked trees wil turn from green over yellow to red within the first 12 months (red-attack). It then takes in between 1-3 years, until all needles have fallen to the ground. The trees remain standing without needles (grey-attack) for several years (Wulder, White, and Dymond 2005). Depending on the type of stand, according to Mitchell and Preisler (1998), dead trees begin to fall after 3 to 5 years and 80 - 90 \% of trees had fallen after 11 years.
+This leads to the different stages of beetle attack that will be considered in this study. All green-attack trees detected in 2021 and 2020 are now with high probability in the red-attack stage. Some of the trees that have been detected as red-attack in 2021, will still classify as red-attack and others as grey-attack. A clear distinction based on time of detection is not possible without additional data, since it can take several years before all needles have fallen off the tree. Collecting the LiDAR data at the end of May, all green-attack trees that have been attacked in 2019 and before, as well as all red-attack trees detected in 2020 and before, will now classify as grey attack. Additionally, it can be expected that most of the trees that have been detected as red-attack in 2011 and before, now have fallen to the ground (Schoennagel et al. 2012).
+The government of Alberta conducts annual Heli-GPS surveys, usually between August 15 and September 15 by flying helicopters at low hight and mapping the GPS locations of detected disturbances in therms of red- and green-attack through observers. These locations have a positional accuracy of +/- 30 m. In most cases only patches consisting of at least 3 trees are recorded.
+As has already shown by various authors before, lodgepole pine (Pinus contorta) is the most commonly attacked by MPB, thus, areas where chosen, where lodgepole pine is one of the most dominant species. This information was based on a visual analysis of species classification, how it was in 2019, on a 30 m by 30 m grid. Each resulting pixel is classified as the most dominant tree species within that pixel. Where trees were not the dominant species, the pixel is classified as ``No Tree''. Table \ref{tab:species}shows all species that dominate the area classified within at least one pixel and their corresponding value and NFI codes.
 
 \begin{table}
 
@@ -171,7 +160,18 @@ Value Code & NFI Code & Common Species Name & Scientific Species Name\\
 \end{tabular}
 \end{table}
 
-The government of Alberta conducts annual Heli-GPS surveys, usually between August 15 and September 15 by flying helicopters at low hight and mapping the GPS locations of detected disturbances in therms of red- and green-attack through observers. These locations have a positional accuracy of +/- 30 m. In most cases only patches consisting of at least 3 trees are recorded. For each of these locations the corresponding cell from the raster data containing the tree species is determined and with a box filter of 5 by 5 the most common tree species for each point can be determined. An example for these buffered GPS locations and the corresponding species data is shown in fig.~\ref{fig:bufferedPointsExample}. This analysis is performed for each of the three areas of interest, both in absolute numbers of pixels within each kernel and relative to the total number of included pixels for each year. It is possible that an area surrounding a GPS location only consists of pixels that have been classified as ``No Tree''. This only means that, in 2019 when the data had been collected, the corresponding 30 by 30 m cell was not predominantlyS covered by trees.
+Three broad areas of interest have been selected (refer to fig.~\ref{fig:AoIs}) based on availability of observed MPB attacks in the years 2011, 2019, 2020, and 2021, while also having a dense network of paved roads and gravel roads. These areas of interest will be referred to as the Grande Prairie (GP) area in the North-West, the Whitecourt (WC) area in the North-East, and the Rocky Mountain House (RMH) area to the South-East.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{../graphics/AreasOfInterest} 
+
+}
+
+\caption{50 km by 50 km areas of interest for further investigation.}\label{fig:AoIs}
+\end{figure}
+
+For each heli-GPS location the corresponding cell from the raster data containing the tree species is determined and with a box filter of 5 by 5 the most common tree species for each point can be determined. An example for these buffered GPS locations and the corresponding species data is shown in fig.~\ref{fig:bufferedPointsExample}. This analysis is performed for all of the three areas of interest, both in absolute numbers of pixels within each kernel and relative to the total number of included pixels for each year.
 
 \begin{figure}
 
@@ -181,6 +181,9 @@ The government of Alberta conducts annual Heli-GPS surveys, usually between Augu
 
 \caption{Exemplary buffered GPS locations}\label{fig:bufferedPointsExample}
 \end{figure}
+
+The distribution of the most dominant tree species for the three areas are shown in figures @ref(fig:freqSpecies11, fig:freqSpecies19, fig:freqSpecies20-21) for the years 2011, 2019, and 2020 and 2021 combined. The most recent years have been combined, as red-attack is expected to be the most dominant attack stage that will be seen now. In the areas around Grande Prairie (1) and Rocky Mountain House (3) LPP is the most dominant species, followed by black spruce and and trembling aspen, at least in the more recent years. In 2011, trembling aspen was the most dominant species in the area of MPB infestation followed by black spruce and LPP after. Around Rocky Mountain House, MPB spread only in more recent years and thus, no data is available for this area in 2011. The area surrounding Whitecourt is dominated by black spruce and trembling aspen, therefore, the areas around detected MPB infestations naturally contain less LPP too.
+
 \begin{figure}
 
 {\centering \includegraphics[width=0.8\linewidth]{../graphics/freq_species_11} 
@@ -206,16 +209,10 @@ The government of Alberta conducts annual Heli-GPS surveys, usually between Augu
 \caption{Frequency of tree species within the surrounding area of each MPB survey point for the years 2020 and 2021 combined.}\label{fig:freqSpecies20-21}
 \end{figure}
 
-The high amount of pixels not dominated by trees in the year 2011 can be explained, when overlaying the GPS points with the species classification in 2018. In many areas where MPB infestation had been an issue in 2011, the trees were harvested by 2019. Each of the areas of interest has similar variance. In the GP and RMH areas, lodgepole pine is the most common species with 36.04 \% and 51.51 \% respectively, while black spruce is most common in the WC area with 34.41 \% and only 13.32 \% LPP. Having similar variances, the most frequent species in the area of GPS locations for red-attack reflect this.
+It is possible that an area surrounding a GPS location only consists of pixels that have been classified as ``No Tree''. This means that, in 2019 when the data had been collected, the corresponding 30 by 30 m cell was not predominantly covered by trees, which is often the case, if in previous years a stand had been infested by MPB and subsequently harvested in order to slow down further spreading of MPB. That explains the high number of pixels not dominated by trees in the year 2011, which was visually verified by overlaying the GPS points from 2011 with the species classification based on data from 2019. In many areas where MPB infestation had been an issue in 2011, the trees were harvested by 2019. Each of the areas of interest has similar variance. In the GP and RMH areas, lodgepole pine is the most common species with 36.04 \% and 51.51 \% respectively, while black spruce is most common in the WC area with 34.41 \% and only 13.32 \% LPP. Having similar variances, the most frequent species in the area of GPS locations for red-attack reflect this.
 
-Information on accessibility is based on the road network available through the government of Alberta (Alberta 2021a, 2021b), since all flight locations with the drone need to be accessible from the road for efficient data collection. As the drone has to stay in line of sight, it is not possible to fly far away from the road.
-
-This document was written with bookdown (Xie 2022).
-
-\hypertarget{aereas}{%
-\section{Aereas}\label{aereas}}
-
-Here are the areas of Interest for us. The areas are based on detected Mountain Pine Beetle in the years 2011, 2019, 2020, and 2021, and in relatively close distance to at least gravel roads. Based on the total number of trees affected by MPB within each area, the selection have been further narrowed down to the top 50 \% and top 25 \% in orange and re respectively.
+Information on accessibility is based on the road network available through the government of Alberta (Alberta 2021a, 2021b), since all flight locations with the drone need to be accessible from the road for efficient data collection. As the drone has to stay in line of sight, it is not possible to fly far away from the road. Thus, possible flight areas were determined as sections of paved or gravel roads, that contain GPS locations of MPB in the years 2011, 2019, 2020, and 2021 within a 250 m radius.
+As every MPB location has a number of affected trees associated to it, this is used to further determine the most promising flight areas. To even out the total number of locations of each year in the selected flight areas, the number of trees within each year is normalized to a Gaussian Normal distribution, from which the top 50 \% and top 25 \% can be selected and are shown in fig.~@ref(fig:AoIGP, AoIWC, AoIRMH; ) in orange and red respectively. The resulting flight areas for top 25 \% contain on average 16.28 \% of LPP, which varies strongly (as desired) with a standard deviation of 25.27 \%. Ultimately, the ground plots will be selected, that are in relative close distance to each other in order to be able to collect all necessary data within the given time frame. The road network was formatted by Chris Bater.
 
 \begin{figure}
 
@@ -223,7 +220,7 @@ Here are the areas of Interest for us. The areas are based on detected Mountain 
 
 }
 
-\caption{Area South of Grande Prairie}\label{fig:GP}
+\caption{Ground plots in the area of Grande Prairie and the road network. The relevant top 50 \% in relative tree numbers are displayed in orange and the top 25 \% marked through red edge color.}\label{fig:AoIGP}
 \end{figure}
 \begin{figure}
 
@@ -231,7 +228,7 @@ Here are the areas of Interest for us. The areas are based on detected Mountain 
 
 }
 
-\caption{Area North of Whitecourt}\label{fig:WC}
+\caption{Ground plots in the area of Whitecourt and the road network. The relevant top 50 \% in relative tree numbers are displayed in orange and the top 25 \% marked through red edge color.}\label{fig:AoIWC}
 \end{figure}
 \begin{figure}
 
@@ -239,8 +236,10 @@ Here are the areas of Interest for us. The areas are based on detected Mountain 
 
 }
 
-\caption{Area North-West of Rocky Mountain House}\label{fig:RMC}
+\caption{Ground plots in the area of Rocky Mountain House and the road network. The relevant top 50 \% in relative tree numbers are displayed in orange and the top 25 \% marked through red edge color.}\label{fig:AoIRMH}
 \end{figure}
+
+This document was written with bookdown (Xie 2022) and was initially generated from a bookdown template available here: \url{https://github.com/jtr13/bookdown-template}.
 
 \hypertarget{references}{%
 \section{References}\label{references}}
