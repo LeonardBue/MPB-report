@@ -1,0 +1,12 @@
+# Introduction {-}
+```{r}
+library(kableExtra)
+```
+
+```{r species, message=FALSE, warnings=FALSE, results='asis'}
+# speciesClasses <- read.csv(file = '../Data/Species_classification_2019/updated_species_list_alberta.csv', header=TRUE, sep=",", check.names = FALSE)
+# knitr::kable(speciesClasses, align = "llll", caption = "Value and NFI Code for Species Common Names", booktabs = TRUE) %>% kable_paper("hover", full_width = F)
+```
+
+
+This document was written with bookdown [@R-bookdown] and was initially generated from a bookdown template available here: https://github.com/jtr13/bookdown-template.

@@ -1,0 +1,6 @@
+# Methods
+
+```{r GP, fig.cap = 'Area South of Grande Prairie', echo=F}
+# knitr::include_graphics('../graphics/South-of-Grande-Prairie.pdf')
+```
+

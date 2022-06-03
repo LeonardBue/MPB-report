@@ -6,5 +6,5 @@ view: https://github.com/LeonardBue/MPB-report/blob/master/%s
 language:
   ui:
     chapter_name: "Chapter "
-rmd_files: ["index.Rmd", "01-stratification.Rmd", "03-references.Rmd"]
+rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Methods.Rmd", "03-references.Rmd"]
 
