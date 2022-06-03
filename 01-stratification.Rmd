@@ -1,4 +1,4 @@
-# Stratification
+# Stratification {-}
 ```{r}
 library(kableExtra)
 ```

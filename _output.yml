@@ -11,8 +11,8 @@ bookdown::pdf_book:
   fontfamily: cmbright
   includes:
     in_header: 
-    - \usepackage{cmbright}
-    - \usepackage[OT1]{fontenc}
+    # - \usepackage{cmbright}
+    # - \usepackage[OT1]{fontenc}
 
 
 # bookdown::gitbook:
